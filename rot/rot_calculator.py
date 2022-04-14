@@ -8,8 +8,16 @@ def rot(phrase):
   return decoded
 
 def main():
-  parser = argparse.ArgumentParser(description='decode rot13 algorithm')
-  parser.add_argument('-phrase', '--phrase', action='store', dest='phrase', help='Decode rot13 passphrase')
+  parser = argparse.ArgumentParser(
+  description='decode rot13 algorithm'
+  )
+  parser.add_argument(
+  '-phrase', 
+  '--phrase', 
+  action='store', 
+  dest='phrase', 
+  help='Decode rot13 passphrase'
+  )
   args = parser.parse_args()
   phrase = args.phrase
   print(rot(phrase))
